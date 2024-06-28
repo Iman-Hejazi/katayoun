@@ -1,11 +1,3 @@
-/**
-* Template Name: Folio
-* Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
@@ -260,5 +252,16 @@
       clickable: true
     }
   });
+  /**
+   * Set copyright year
+   */
+  const setCopyrightYear = () => {
+    let copyrightElement = select('#copyright');
+    if (copyrightElement) {
+      copyrightElement.innerHTML = 
+        "Copyright &copy; " + new Date().getFullYear() + " Katayoon Khojasteh. All rights reserved.";
+    }
+  }
 
+  window.addEventListener('load', setCopyrightYear);
 })()
